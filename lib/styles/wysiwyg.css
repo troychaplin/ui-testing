@@ -1,7 +1,7 @@
 /* Add prose to the editor */
 
 .ql-editor {
-  @apply prose prose-lg prose-rds max-w-none md:prose-xl prose-img:w-full prose-img:rounded-lg !important;
+  @apply prose prose-lg prose-rds max-w-none md:prose-xl prose-img:w-full prose-img:rounded-lg;
 }
 
 .ql-editor {

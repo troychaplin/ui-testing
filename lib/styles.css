@@ -3,5 +3,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Priority Plus */
-/* @import './components/Button/styles.css'; */
+/* Global Styles */
+@import './styles/spacing.css';
+
+/* Components */
+@import './components/Alert/styles.css';
+@import './components/Card/styles.css';
+@import './components/Listing/styles.css';
+
+/* Layouts */
+@import './layouts/StackedList/styles.css';
