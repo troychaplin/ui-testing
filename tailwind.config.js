@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ['./lib/**/*.{js,ts,jsx,tsx}', './lib/**/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -99,11 +99,10 @@ export default {
       },
     },
   },
-  variants: {},
   plugins: [
-    '@tailwindcss/aspect-ratio',
-    '@tailwindcss/container-queries',
-    '@tailwindcss/forms',
-    '@tailwindcss/typography',
-  ],
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/container-queries'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ]
 }
