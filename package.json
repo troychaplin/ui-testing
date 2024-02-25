@@ -33,7 +33,7 @@
     "build:storybook": "storybook build",
     "prettier": "prettier --write .",
     "size": "size-limit",
-    "rebuild": "rn -rf node_modules ; npm install",
+    "rebuild": "rn -rf node_modules ; npm install ; npm run build ; npm run size",
     "test": "echo \"No test specified\" && exit 0",
     "prepare": "husky"
   },
@@ -86,8 +86,10 @@
     "vite-plugin-dts": "^3.7.3"
   },
   "peerDependencies": {
+    "date-fns": "^3.3.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-player": "^2.14.1"
   },
   "directories": {
     "lib": "lib"
