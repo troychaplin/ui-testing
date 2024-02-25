@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/troychaplin/ui-kit/issues"
   },
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "dist/ui-kit.umd.js",
   "module": "dist/ui-kit.mjs",
   "types": "dist/main.d.ts",
@@ -40,11 +40,13 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "@react-google-maps/api": "^2.19.3",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "date-fns": "^3.3.1",
+    "priority-plus": "^1.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-player": "^2.14.1"
