@@ -48,3 +48,10 @@ export { Container } from './layouts/Container/Container'
 export { Main } from './layouts/Main/Main'
 export { Section } from './layouts/Section/Section'
 export { StackedList } from './layouts/StackedList/StackedList'
+
+// Deprecated
+// export { Banner } from './_deprecated/Banner/Banner'
+// export { Form } from './_deprecated/Forms/Form/Form'
+// export { HeroTextImage } from './_deprecated/HeroTextImage/HeroTextImage'
+// export { Panel } from './_deprecated/Panel/Panel'
+// export { TopNav } from './_deprecated/TopNav/TopNav'
