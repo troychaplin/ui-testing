@@ -29,8 +29,9 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings 0",
     "storybook": "storybook dev -p 6006",
-    "build": "tsc && vite build && npm run size",
+    "build": "tsc && npm run icon-list && vite build && npm run size",
     "build:storybook": "storybook build",
+    "icon-list": "node ./generateIconList.mjs",
     "prettier": "prettier --write .",
     "size": "size-limit",
     "rebuild": "rn -rf node_modules ; npm install ; npm run build ; npm run size",
