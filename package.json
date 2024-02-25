@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/troychaplin/ui-kit/issues"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/ui-kit.umd.js",
   "module": "dist/ui-kit.mjs",
   "types": "dist/main.d.ts",
