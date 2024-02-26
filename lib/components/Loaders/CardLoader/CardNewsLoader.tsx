@@ -1,6 +1,6 @@
 import { Card } from '../../Card/Card'
 
-export const CardLoader = () => {
+export const CardNewsLoader = () => {
   return (
     <Card>
       <div className="animate-pulse">
