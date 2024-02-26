@@ -22,7 +22,16 @@ export declare const NavAsideData: {
     href: string;
     title: string;
 }[];
-export declare const NavAsideLoggedInOptions: {
+export declare const NavAsideLoggedInOptionsHref: {
     href: string;
     title: string;
 }[];
+export declare const NavAsideLoggedInOptionsOnClick: ({
+    href: string;
+    title: string;
+    onClickHandler?: undefined;
+} | {
+    onClickHandler: () => void;
+    title: string;
+    href?: undefined;
+})[];
