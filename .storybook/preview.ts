@@ -10,6 +10,27 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: [
+          'Get Started',
+          ['Introduction', 'Changelog'],
+          'Examples',
+          [
+            'Blocks',
+            'Layouts',
+          ],
+          'Projects',
+          ['Event Calendar', ['Homepage', 'Single Event']],
+          'Components',
+          'Resources',
+          'Layouts',
+          ['Body', 'Main', 'Container', 'Article', 'Column', 'Aside', 'Panel', 'Stacked List'],
+          'Deprecated',
+        ],
+      },
+    },
   },
 }
 

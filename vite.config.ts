@@ -14,12 +14,12 @@ export default defineConfig({
     },
   },
   build: {
-    copyPublicDir: false,
+    copyPublicDir: true,
     lib: {
       entry: path.resolve(__dirname, 'lib/main.ts'),
-      name: 'UI KIT',
+      name: 'rds',
       formats: ['es', 'umd'],
-      fileName: 'ui-kit',
+      fileName: (format) => `rds.${format}.js`,
     },
     rollupOptions: {
       external: [...Object.keys(packageJson.dependencies), ...Object.keys(packageJson.peerDependencies)],

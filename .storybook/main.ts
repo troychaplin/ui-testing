@@ -1,7 +1,12 @@
 import type { StorybookConfig } from '@storybook/react-vite'
 
 const config: StorybookConfig = {
-  stories: ['../lib/**/*.mdx', '../lib/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: [
+    '../lib/**/*.mdx',
+    '../lib/**/**/*.mdx',
+    '../lib/**/*.stories.@(js|jsx|ts|tsx)',
+    '../lib/**/**/*.stories.@(js|jsx|ts|tsx)',
+  ],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-links',

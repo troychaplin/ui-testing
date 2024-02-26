@@ -2,7 +2,7 @@
 // import { Form } from '../Form/Form'
 
 // const meta: Meta<typeof Form> = {
-//   title: 'Components/Forms/Places Autocomplete',
+//   title: 'Deprecated/Forms/Places Autocomplete',
 //   component: Form,
 //   tags: ['autodocs'],
 //   parameters: {
