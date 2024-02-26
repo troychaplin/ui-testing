@@ -3,6 +3,7 @@ import path from 'node:path'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
+import * as packageJson from './package.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,7 +22,7 @@ export default defineConfig({
       fileName: 'ui-kit',
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime', 'tailwindcss'],
+      external: [...Object.keys(packageJson.dependencies), ...Object.keys(packageJson.peerDependencies)],
     },
   },
 })
