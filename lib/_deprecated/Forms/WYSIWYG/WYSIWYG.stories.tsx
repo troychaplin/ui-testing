@@ -3,7 +3,7 @@ import { Form } from '../Form/Form'
 import ReactQuill from 'react-quill'
 
 const meta: Meta<typeof Form> = {
-  title: 'Components/Forms/WSYWIG',
+  title: 'Deprecated/Forms/WSYWIG',
   component: Form,
   tags: ['autodocs'],
   parameters: {

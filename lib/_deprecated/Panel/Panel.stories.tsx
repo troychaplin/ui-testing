@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Panel } from './Panel'
 
 const meta: Meta<typeof Panel> = {
-  title: 'Layouts/Panel',
+  title: 'Deprecated/Panel',
   component: Panel,
   tags: ['autodocs'],
   parameters: {
