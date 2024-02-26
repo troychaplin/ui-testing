@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 import { Button } from '../Button/Button'
-import styles from './Calendar.styles'
 
 import {
   add,
@@ -29,6 +28,11 @@ export interface CalendarProps {
   }[]
   callback: (d: Date) => void
   defaultDate?: string
+}
+
+const styles = {
+  prevNextArrows: `flex items-center justify-center flex-none p-2 text-cu-black-800 hover:text-cu-red`,
+  calendarGrid: `grid grid-cols-7 gap-px mt-4 text-center`,
 }
 
 const classNames = (...classes: (string | boolean)[]) => {
@@ -64,17 +68,17 @@ export const Calendar = ({ events, callback, defaultDate }: CalendarProps) => {
 
   return (
     <div className="cu-calendar not-prose">
-      <div className="not-prose mb-6 flex items-center rounded-lg border border-cu-black-100 bg-white py-2">
+      <div className="flex items-center py-2 mb-6 bg-white border rounded-lg not-prose border-cu-black-100">
         <button type="button" onClick={previousMonth} className={`${styles.prevNextArrows}`}>
-          <span className="sr-only text-base">Previous month</span>
-          <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+          <span className="text-base sr-only">Previous month</span>
+          <ChevronLeftIcon className="w-5 h-5" aria-hidden="true" />
         </button>
-        <h2 className="flex-auto text-center text-base font-semibold text-cu-black-900">
+        <h2 className="flex-auto text-base font-semibold text-center text-cu-black-900">
           {format(firstDayCurrentMonth, 'MMMM yyyy')}
         </h2>
         <button onClick={nextMonth} type="button" className={`${styles.prevNextArrows}`}>
-          <span className="sr-only text-base">Next month</span>
-          <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+          <span className="text-base sr-only">Next month</span>
+          <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
         </button>
       </div>
 
@@ -127,9 +131,9 @@ export const Calendar = ({ events, callback, defaultDate }: CalendarProps) => {
               <time dateTime={format(day, 'yyyy-MM-dd')}>{format(day, 'd')}</time>
             </button>
 
-            <div className="mx-auto mt-1 h-1 w-1">
+            <div className="w-1 h-1 mx-auto mt-1">
               {events?.some((event) => isSameDay(parseISO(event.startDatetime), day)) && (
-                <div className="h-1 w-1 rounded-full bg-sky-500"></div>
+                <div className="w-1 h-1 rounded-full bg-sky-500"></div>
               )}
             </div>
           </div>

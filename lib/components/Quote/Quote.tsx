@@ -1,5 +1,5 @@
 import React from 'react'
-import { styles } from './Quote.styles'
+import { styles } from './Quote.Styles'
 
 export interface QuoteProps {
   children?: React.ReactNode

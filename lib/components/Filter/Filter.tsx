@@ -2,7 +2,7 @@ import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Disclosure, Menu, Popover, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import styles from './Filter.styles'
+import styles from './Filter.Styles'
 import { useLinkContext } from '../LinkProvider'
 
 export interface FilterProps {
@@ -85,29 +85,29 @@ export const Filter = ({ sortOptions, filters, callback }: FilterProps) => {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white shadow-xl">
-                <div className="flex items-center justify-between bg-cu-black-50 px-4 py-3">
+              <Dialog.Panel className="relative flex flex-col w-full h-full max-w-xs ml-auto overflow-y-auto bg-white shadow-xl">
+                <div className="flex items-center justify-between px-4 py-3 bg-cu-black-50">
                   <h2 className="text-base font-medium text-cu-black-800">Filters</h2>
                   <button
                     type="button"
-                    className="-mr-1 flex h-8 w-8 items-center justify-center rounded-md bg-white p-2 text-cu-black-600"
+                    className="flex items-center justify-center w-8 h-8 p-2 -mr-1 bg-white rounded-md text-cu-black-600"
                     onClick={() => setOpen(false)}
                   >
                     <span className="sr-only">Close menu</span>
-                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="w-6 h-6" aria-hidden="true" />
                   </button>
                 </div>
 
                 {/* Filters */}
                 <form>
                   {filters.map((section) => (
-                    <Disclosure as="div" key={section.name} className="border-t border-cu-black-100 px-4 py-6">
+                    <Disclosure as="div" key={section.name} className="px-4 py-6 border-t border-cu-black-100">
                       {({ open }) => (
                         <>
-                          <h3 className="group -mx-2 -my-3 flow-root">
-                            <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-sm text-cu-black-300 group-hover:text-cu-black-600">
+                          <h3 className="flow-root -mx-2 -my-3 group">
+                            <Disclosure.Button className="flex items-center justify-between w-full px-2 py-3 text-sm bg-white text-cu-black-300 group-hover:text-cu-black-600">
                               <span className="font-medium text-cu-black-600">{section.name}</span>
-                              <span className="ml-6 flex items-center">
+                              <span className="flex items-center ml-6">
                                 <ChevronDownIcon
                                   className={classNames(open ? '-rotate-180' : 'rotate-0', 'h-5 w-5 transform')}
                                   aria-hidden="true"
@@ -126,7 +126,7 @@ export const Filter = ({ sortOptions, filters, callback }: FilterProps) => {
                                     type="checkbox"
                                     onChange={() => handleSelect(option.label)}
                                     defaultChecked={isSelected(option.label)}
-                                    className="h-4 w-4 rounded border-cu-black-200 text-cu-red focus:ring-cu-red-100"
+                                    className="w-4 h-4 rounded border-cu-black-200 text-cu-red focus:ring-cu-red-100"
                                   />
                                   <label
                                     htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
@@ -155,7 +155,7 @@ export const Filter = ({ sortOptions, filters, callback }: FilterProps) => {
         </h2>
 
         {/* Filter selectors */}
-        <div className="rounded-tl-lg rounded-tr-lg border border-cu-black-100 bg-gray-50 py-4">
+        <div className="py-4 border rounded-tl-lg rounded-tr-lg border-cu-black-100 bg-gray-50">
           <div className="flex justify-between px-4 sm:px-6">
             <Menu as="div" className="relative">
               {sortOptions && sortOptions?.length > 0 && (
@@ -177,7 +177,7 @@ export const Filter = ({ sortOptions, filters, callback }: FilterProps) => {
                 leaveTo="transform opacity-0 scale-95"
               >
                 {/* Sort drop down menu */}
-                <Menu.Items className="absolute -left-4 z-10 mt-2 w-40 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-10 w-40 mt-2 bg-white rounded-md shadow-lg -left-4 ring-1 ring-black ring-opacity-5 focus:outline-none">
                   {sortOptions && sortOptions?.length > 0 && (
                     <div className="py-1">
                       {sortOptions.map((option) => (
@@ -213,7 +213,7 @@ export const Filter = ({ sortOptions, filters, callback }: FilterProps) => {
 
             <div className="hidden sm:block">
               <div className="flow-root">
-                <Popover.Group className="-mx-4 flex items-center divide-x divide-gray-200">
+                <Popover.Group className="flex items-center -mx-4 divide-x divide-gray-200">
                   {filters.map((section, sectionIdx) => (
                     <Popover key={sectionIdx} className="relative inline-block px-4 text-left">
                       <Popover.Button className={styles.dropDownTitles}>
@@ -230,7 +230,7 @@ export const Filter = ({ sortOptions, filters, callback }: FilterProps) => {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
-                        <Popover.Panel className="absolute right-0 z-10 mt-2 rounded-md bg-white p-4 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Popover.Panel className="absolute right-0 z-10 p-4 mt-2 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <form className="space-y-4">
                             {section.options.map((option, optionIdx) => (
                               <div key={optionIdx} className="flex items-center">
@@ -241,11 +241,11 @@ export const Filter = ({ sortOptions, filters, callback }: FilterProps) => {
                                   type="checkbox"
                                   onChange={() => handleSelect(option.label)}
                                   defaultChecked={isSelected(option.label)}
-                                  className="h-4 w-4 rounded border-cu-black-200 text-cu-red focus:ring-cu-red-100"
+                                  className="w-4 h-4 rounded border-cu-black-200 text-cu-red focus:ring-cu-red-100"
                                 />
                                 <label
                                   htmlFor={`filter-${section.id}-${optionIdx}`}
-                                  className="ml-3 whitespace-nowrap pr-6 text-sm text-cu-black-600"
+                                  className="pr-6 ml-3 text-sm whitespace-nowrap text-cu-black-600"
                                 >
                                   {option.label}
                                 </label>
@@ -263,30 +263,30 @@ export const Filter = ({ sortOptions, filters, callback }: FilterProps) => {
         </div>
 
         {/* Active filters */}
-        <div className="rounded-bl-lg rounded-br-lg border border-t-0 border-cu-black-100 bg-white">
+        <div className="bg-white border border-t-0 rounded-bl-lg rounded-br-lg border-cu-black-100">
           <div className="px-4 py-3 sm:flex sm:items-center sm:px-6">
             <h3 className="py-1 text-sm text-cu-black-600">
               Filters
               <span className="sr-only">, active</span>
             </h3>
 
-            <div aria-hidden="true" className="hidden h-5 w-px bg-gray-300 sm:ml-4 sm:block" />
+            <div aria-hidden="true" className="hidden w-px h-5 bg-gray-300 sm:ml-4 sm:block" />
 
             <div className="mt-4 sm:ml-4 sm:mt-0">
-              <div className="-m-1 flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3 -m-1">
                 {activeFilters.map((activeFilter, index) => (
                   <span
                     key={index}
-                    className="inline-flex items-center rounded-lg border border-cu-black-100 bg-white py-1 pl-3 pr-2 text-sm text-cu-black-600"
+                    className="inline-flex items-center py-1 pl-3 pr-2 text-sm bg-white border rounded-lg border-cu-black-100 text-cu-black-600"
                   >
                     <span>{activeFilter}</span>
                     <button
                       type="button"
                       onClick={() => handleRemove(activeFilter)}
-                      className="ml-1 inline-flex h-4 w-4 flex-shrink-0 rounded-full p-1 text-cu-black-400 hover:bg-cu-red hover:text-white"
+                      className="inline-flex flex-shrink-0 w-4 h-4 p-1 ml-1 rounded-full text-cu-black-400 hover:bg-cu-red hover:text-white"
                     >
                       <span className="sr-only">Remove filter for {activeFilter}</span>
-                      <svg className="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
+                      <svg className="w-2 h-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
                         <path strokeLinecap="round" strokeWidth="1.5" d="M1 1l6 6m0-6L1 7" />
                       </svg>
                     </button>
