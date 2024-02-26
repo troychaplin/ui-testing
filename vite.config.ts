@@ -5,7 +5,6 @@ import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
 import * as packageJson from './package.json'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), dts({ include: ['lib'], insertTypesEntry: true })],
   css: {
@@ -23,6 +22,16 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [...Object.keys(packageJson.dependencies), ...Object.keys(packageJson.peerDependencies)],
+      output: {
+        globals: {
+          react: 'React',
+          'date-fns': 'dateFns',
+          'react-player': 'ReactPlayer',
+          '@headlessui/react': 'HeadlessUI',
+          '@react-google-maps/api': 'ReactGoogleMapsAPI',
+          'priority-plus': 'PriorityPlus',
+        },
+      },
     },
   },
 })

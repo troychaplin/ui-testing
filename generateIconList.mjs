@@ -20,8 +20,8 @@ async function generateIconLists() {
       return {
         value: name,
         label: formatLabel(name),
-      };
-    });
+      }
+    })
 
     // Generate JS file
     const outputJsFile = `export const iconNames = [\n  ${icons.map((icon) => JSON.stringify(icon)).join(',\n  ')}\n];`
