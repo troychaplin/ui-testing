@@ -5,5 +5,4 @@ export interface ILinkProvider {
     children: React.ReactNode;
 }
 export declare const Link: FC<ILinkProvider>;
-export declare const useLinkContext: () => any;
 export declare const LinkProvider: any;
