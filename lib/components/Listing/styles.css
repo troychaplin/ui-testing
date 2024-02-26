@@ -1,9 +1,0 @@
-/* Listing Images */
-
-.cu-listing a {
-  @apply inline-flex;
-}
-
-.cu-listing img:not(.cu-icon-thumb) {
-  @apply object-cover w-full h-full rounded-md;
-}
