@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './Avatar.styles'
 import { rdsRounded, rdsBorderWidth, rdsBorderColor } from '../../utils/optionClasses'
 
 export type ImageType = {
@@ -35,6 +34,12 @@ const avatarSizes = {
   xl: `text-4xl h-40 w-40`,
   '2xl': `text-6xl h-48 w-48`,
   '4xl': 'text-7xl h-56 w-56',
+}
+
+const styles = {
+  core: `not-prose inline-block bg-cu-black-50 text-cu-black-800 overflow-hidden focus:ring-2 focus:ring-cu-black-100 focus:ring-offset-2`,
+  'no-image': `bg-cu-black-100 flex items-center justify-center font-semibold`,
+  shadow: `shadow-lg`,
 }
 
 export const Avatar = ({ size = 'xl', rounded, borderWidth, borderColor, hasShadow, user, onClick }: AvatarProps) => {
