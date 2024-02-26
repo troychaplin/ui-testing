@@ -1,9 +1,10 @@
 {
   "name": "@troychaplin79/ui-testing",
+  "version": "0.0.5",
   "description": "A library template built by Vite, React, Typescript, TailwindCSS and Storybook",
-  "homepage": "https://github.com/troychaplin/ui-kit#readme",
   "author": "Troy Chaplin",
   "license": "MIT",
+  "homepage": "https://github.com/troychaplin/ui-kit#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/troychaplin/ui-kit.git"
@@ -11,7 +12,6 @@
   "bugs": {
     "url": "https://github.com/troychaplin/ui-kit/issues"
   },
-  "version": "0.0.4",
   "main": "dist/ui-kit.umd.js",
   "module": "dist/ui-kit.mjs",
   "types": "dist/main.d.ts",
