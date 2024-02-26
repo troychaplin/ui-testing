@@ -1,6 +1,6 @@
 {
   "name": "@troychaplin79/ui-testing",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "A library template built by Vite, React, Typescript, TailwindCSS and Storybook",
   "author": "Troy Chaplin",
