@@ -60,6 +60,9 @@ export { Main } from './layouts/Main/Main'
 export { Section } from './layouts/Section/Section'
 export { StackedList } from './layouts/StackedList/StackedList'
 
+// Javascript Files
+export { iconNames } from '../public/assets/font-awesome/icon-list.js'
+
 // Deprecated
 // export { Banner } from './_deprecated/Banner/Banner'
 // export { Form } from './_deprecated/Forms/Form/Form'
