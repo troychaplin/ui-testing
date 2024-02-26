@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { NavMenuItemWrapperStyles, navMenuItemStyles } from './Nav.Styles'
-import { Avatar, UserInfoType } from './../Avatar/Avatar'
+import { Avatar, UserInfoType } from '../Avatar/Avatar'
 import { NavSubMenu } from './NavSubMenu'
 import ImenuItem from './NavInterface'
 import { useLinkContext } from '../LinkProvider'

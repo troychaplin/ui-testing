@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import usePagination, { DOTS } from '../../hooks/usePagination'
-import styles from './Pagination.styles'
+import styles from './Pagination.Styles'
 
 export interface PaginationProps {
   hasBorder?: boolean
@@ -67,7 +67,7 @@ export const Pagination = ({
     <div
       className={`cu-pagination not-prose mt-8 flex items-center justify-between first:mt-0 ${borderStyles} ${spacingStyles}`}
     >
-      <div className="flex flex-1 justify-between sm:hidden">
+      <div className="flex justify-between flex-1 sm:hidden">
         <button onClick={onPrevious} className={`${styles.mobileButtons}`}>
           Previous
         </button>
@@ -84,14 +84,14 @@ export const Pagination = ({
         </p>
 
         <nav aria-label="Pagination">
-          <ul className="inline-flex overflow-hidden rounded-md border border-cu-black-100">
+          <ul className="inline-flex overflow-hidden border rounded-md border-cu-black-100">
             <li
               className={`${styles.pageListNumbers} ${styles.pageListArrows}`}
               role="presentation"
               onClick={onPrevious}
             >
               <span className="sr-only">Previous</span>
-              <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+              <ChevronLeftIcon className="w-5 h-5" aria-hidden="true" />
             </li>
 
             {paginationRange !== undefined &&
@@ -118,7 +118,7 @@ export const Pagination = ({
               })}
             <li className={`${styles.pageListNumbers} ${styles.pageListArrows}`} role="presentation" onClick={onNext}>
               <span className="sr-only">Next</span>
-              <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+              <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
             </li>
           </ul>
         </nav>
