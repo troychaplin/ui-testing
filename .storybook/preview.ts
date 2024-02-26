@@ -17,10 +17,7 @@ const preview: Preview = {
           'Get Started',
           ['Introduction', 'Changelog'],
           'Examples',
-          [
-            'Blocks',
-            'Layouts',
-          ],
+          ['Blocks', 'Layouts'],
           'Projects',
           ['Event Calendar', ['Homepage', 'Single Event']],
           'Components',
