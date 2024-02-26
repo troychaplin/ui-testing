@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { UserInfoType } from './../Avatar/Avatar';
+import { UserInfoType } from '../Avatar/Avatar';
 import ImenuItem from './NavInterface';
 export declare const styles: {
     listItemLink: string;

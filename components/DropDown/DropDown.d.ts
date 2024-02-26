@@ -12,4 +12,4 @@ export interface DropDownProps {
     menuAlign?: 'left' | 'right';
     listItems: DropDownItemProps[];
 }
-export declare const DropDown: ({ children, buttonText, renderAs, listItems, menuAlign, }: DropDownProps) => import("react/jsx-runtime").JSX.Element;
+export declare const DropDown: ({ children, buttonText, renderAs, listItems, menuAlign }: DropDownProps) => import("react/jsx-runtime").JSX.Element;
