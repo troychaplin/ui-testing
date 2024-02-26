@@ -1,15 +1,15 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Column } from '../../../layouts/Column/Column'
-import { CardLoader } from './CardLoader'
 import { CardEventLoader } from './CardEventLoader'
 import { CardIconLoader } from './CardIconLoader'
 import { CardNewsLoader } from './CardNewsLoader'
 import { CardPeopleLoader } from './CardPeopleLoader'
 import { CardVideoLoader } from './CardVideoLoader'
 
-const meta: Meta<typeof CardLoader> = {
+const meta: Meta<typeof CardNewsLoader> = {
   title: 'Components/Load Screens/Card Loader',
-  component: CardLoader,
+  component: CardNewsLoader,
   tags: ['autodocs'],
   parameters: {
     controls: {
@@ -19,12 +19,12 @@ const meta: Meta<typeof CardLoader> = {
 }
 
 export default meta
-type Story = StoryObj<typeof CardLoader>
+type Story = StoryObj<typeof CardNewsLoader>
 
 export const Default: Story = {}
 
 Default.args = {
-  children: 'CardLoader component',
+  children: 'CardNewsLoader component',
 }
 
 export const News: Story = {
@@ -56,8 +56,8 @@ export const TwoCol: Story = {
   name: 'Two Columns',
   render: () => (
     <Column maxWidth="5xl" cols="2" gridGap="10">
-      <CardLoader />
-      <CardLoader />
+      <CardNewsLoader />
+      <CardNewsLoader />
     </Column>
   ),
 }
