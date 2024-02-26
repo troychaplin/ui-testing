@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { createContext, useContext, FC } from 'react'
+import React, { createContext, FC } from 'react'
 
 const DefaultLinkComponent = 'a'
 
@@ -13,7 +13,5 @@ export interface ILinkProvider {
 export const Link: FC<ILinkProvider> = ({ type, children }): JSX.Element => {
   return <LinkContext.Provider value={type}>{children}</LinkContext.Provider>
 }
-
-export const useLinkContext = (): any => useContext(LinkContext)
 
 export const LinkProvider = Object.assign(Link)

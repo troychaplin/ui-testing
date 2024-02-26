@@ -1,4 +1,4 @@
-import { useLinkContext } from '../LinkProvider'
+import { useLinkContext } from '../LinkProvider/useLinkContext'
 
 export interface NavLogoProps {
   title?: string
