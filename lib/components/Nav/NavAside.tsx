@@ -3,7 +3,7 @@ import { NavMenuItemWrapperStyles, navMenuItemStyles } from './Nav.Styles'
 import { Avatar, UserInfoType } from '../Avatar/Avatar'
 import { NavSubMenu } from './NavSubMenu'
 import ImenuItem from './NavInterface'
-import { useLinkContext } from '../LinkProvider'
+import { useLinkContext } from '../LinkProvider/useLinkContext'
 
 export const styles = {
   listItemLink: `text-[15px] md:text-base font-medium text-cu-black-600 hover:text-cu-red`,

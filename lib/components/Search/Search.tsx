@@ -3,7 +3,7 @@ import { Combobox, Dialog, Transition } from '@headlessui/react'
 import MagnifyingGlassIcon from '@heroicons/react/24/solid/MagnifyingGlassIcon'
 import XMarkIcon from '@heroicons/react/24/solid/XMarkIcon'
 import { rdsOverlay } from '../../utils/optionClasses'
-import { useLinkContext } from '../LinkProvider'
+import { useLinkContext } from '../LinkProvider/useLinkContext'
 
 export interface SourceDataProps {
   [k: string]: string | number

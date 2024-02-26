@@ -1,7 +1,7 @@
 import { FooterLogoLinks } from '../FooterLogoLinks/FooterLogoLinks'
 import { footerStyles } from '../../../utils/globalClasses'
 import { FooterStandardLinks as linkData } from '../../../data/FooterStandardData'
-import { useLinkContext } from '../../LinkProvider'
+import { useLinkContext } from '../../LinkProvider/useLinkContext'
 
 const Social = [
   {
